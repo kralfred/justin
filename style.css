@@ -1,0 +1,280 @@
+body{
+    text-align: center;
+    margin: 0;
+    background-color: #000000;
+}
+
+
+#mainSectionIndex{
+    
+   
+  
+   padding-bottom: 50rem;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   
+    background-image:linear-gradient(to bottom, transparent 20%, #000000bd 90%, #000000 95%), url('images/justinRe.jpg');
+
+    background-attachment: local;
+}
+#mainSectionGallery{
+   
+
+    background-image: linear-gradient(to bottom, transparent 20%, #000000 90%, #000000 95%), url("images/justin2.jpg");
+    background-repeat: no-repeat;
+
+  background-size: 100%;
+
+}
+
+h1 {
+color: #F29F05;
+font-family: 'Snell Roundhand', sans-serif;
+margin: 0;
+padding-top: 20px;
+font-size: 5rem;
+
+}
+
+
+h2 {
+      font-family:'blighty', sans-serif;
+      color:white;
+}
+.mainMenu {
+    font-family:'blighty', sans-serif;
+    color: #BF4904;
+  
+    text-decoration: none;
+    padding: 15px;
+    
+    border-radius: 30%;
+    font-size: 1.875em;
+    margin: 15px;
+  
+}
+.mainMenu:hover{
+    border: 1px solid grey;
+   
+
+}
+#MM{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+#concertsBg{
+    background-image: linear-gradient(to bottom, transparent 20%, #000000bd 90%, #000000 95%), url('images/gallery/1.jpg');;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 50rem;
+}
+
+#secondSection{
+    background-size: 100%;
+    background-color: #000000;
+    background-image:linear-gradient(to top, transparent 20%, #000000bd 90%, #000000 95%), url('images/drumPic.jpg');
+    padding-bottom: 60rem;
+    background-repeat: no-repeat;
+  
+    
+}
+#indexTextArea{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-around;
+    padding-left: 20%;
+    color: #B0CDD9;
+    font-size: 2rem;
+}
+
+
+.socialLink {
+    background-color:white;
+    height: 50px;
+   
+    padding: 10px;
+    margin: 20px;
+}
+#facebook{
+    border-radius: 50%;
+}
+#mail{
+    border-radius: 20%;
+}
+#youtube{
+    border-radius: 30%;
+}
+#facebook:hover{
+    background-color: rgb(23, 77, 177);
+}
+#youtube:hover{
+    background-color: rgb(201, 22, 22);
+}
+#mail:hover{
+    background-color: rgb(220, 226, 238);
+}
+#transLogo{
+    width: 50%;
+    float:right;
+}
+#adress{
+    width: 100%;
+    display: inline-block;
+}
+
+.modal{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9);
+}
+
+#cancelButton{
+    display: none;
+    position: fixed;
+    background-color: transparent;
+}
+.copy{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+   
+}
+
+.galleryPic:hover{
+    opacity: 0.7;
+}
+
+.galleryPic{
+   height: 200px;
+   width: 300px;
+   margin: 10px;
+}
+
+#gallerySpace{
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    
+  
+}
+.cell{
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+     display: flex;
+}
+
+
+
+                                                                       /* BIO */
+
+
+#bioImg{
+     float: right;
+     border-radius: 5%;
+     -webkit-filter: brightness(0.5);
+  filter: brightness(0.9);
+
+    
+}
+
+.bioTextArea{
+    font-size: medium;
+    color: #B0CDD9;
+    width: 90%;
+    text-align: left;
+    padding: 6.25rem 0  6.25rem 2rem;
+    display: inline-block;
+    margin: 0;
+}    
+.bioText{
+    font-size: 1.5rem;
+    padding: 0.5rem 5rem 1rem 0.5rem;
+    display: block;
+    
+}                  
+#bio1{
+margin-right: 1rem;
+position: relative;
+
+}
+
+.footer{
+    color: white;
+    text-align: center;
+    position:static;
+    bottom: 0;
+    width:100%;
+}
+
+
+@media (max-width: 1200px){
+    #bioImg{
+        display: none;
+    }
+    .bioTextArea{
+        text-align: center;
+    }
+    #mainSectionIndex{
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+        
+    }
+    #secondSection{
+        padding-bottom: 25rem;
+    }
+    #indexTextArea{
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        align-items: center;
+    }
+    #firstBlockContact{
+        padding-bottom: 4rem;
+     
+        padding-left: 10rem;
+        align-items: center;
+        justify-content: space-around;
+      }
+}
+
+#mailIcon{
+    background-color: white;
+}
+
+#table{
+    color: white;
+    border-color: white;
+    border: 1px;
+    border-style: solid;
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+}
+#firstArea{
+    width: 100%;
+}
+#firstBlockContact{
+  padding-top: 4rem;
+  display: flex;
+  padding-left: 10rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#form{
+ color: white;
+
+}
