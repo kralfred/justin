@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="images/music-solid.svg">
-<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/snell-roundhand">
-<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/blighty">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/music-solid.svg">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/snell-roundhand">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/blighty">
+    <link rel="stylesheet" href="pages/gallery/gallery.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
 </head>
 <body>
     <button id="cancelButton">x</button>
@@ -17,12 +18,16 @@
         <script src="nav.js"></script>
         <div id="nav-container"></div>
         <div id="gallerySpace"></div>
-        <div id="maxImage" class="modal"></div>
+        <div id="modal" class="modal">
+            <span id="prevBtn" class="nav-btn"><</span>
+            <img id="modalImg" class="modal-content">
+            <span id="nextBtn" class="nav-btn">></span>
+        </div>
 
     </div>
 
-<script src="script.js"></script>
 
+<script src="pages/gallery/gallery.js"></script>
 
 <footer class="footer">
   <div id="copyRight"><h3>Studentská Semestrální Práce - Alfred Withers &copy; 2022</h3>

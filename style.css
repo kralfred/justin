@@ -46,29 +46,31 @@ h2 {
       font-family:'blighty', sans-serif;
       color:white;
 }
-.mainMenu {
-    font-family:'blighty', sans-serif;
-    color: #BF4904;
-  
-    text-decoration: none;
-    padding: 15px;
-    
-    border-radius: 30%;
-    font-size: 1.875em;
-    margin: 15px;
-  
-}
-.mainMenu:hover{
-    border: 1px solid grey;
-   
-
-}
-#MM{
+#MM {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     flex-wrap: wrap;
 }
+
+.mainMenu {
+    font-family: 'blighty', sans-serif;
+    color: #BF4904;
+    text-decoration: none;
+    font-size: 1.875em;
+    border-radius: 30%; /* Keep the radius */
+    padding: 5px 10px; /* Reduce padding, adjust as needed */
+    margin: 30px 15px; /* Keep horizontal spacing, remove vertical */
+}
+
+    .mainMenu:hover {
+        background: #555; /* Keep hover background */
+        /* Remove border to avoid size jump */
+    }
+
+    .mainMenu.active {
+        font-weight: bold; /* If you still use this */
+    }
 #concertsBg{
     background-image: linear-gradient(to bottom, transparent 20%, #000000bd 90%, #000000 95%), url('images/gallery/1.jpg');;
     background-size: 100%;
@@ -81,35 +83,7 @@ h2 {
     color: white;
 }
 
-#music-player {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 800px;
-}
 
-    #music-player p {
-        margin: 0 0 10px;
-        font-family: Arial, sans-serif;
-        color: #333;
-    }
-
-#playPauseBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-    #playPauseBtn:hover {
-        background-color: #555;
-    }
-
-    #playPauseBtn.playing {
-        background-color: #ff4444; /* Red when playing */
-    }
 
 
 #audioToggleBtn {
@@ -152,31 +126,7 @@ h2 {
 }
 
 
-.socialLink {
-    background-color:white;
-    height: 50px;
-   
-    padding: 10px;
-    margin: 20px;
-}
-#facebook{
-    border-radius: 50%;
-}
-#mail{
-    border-radius: 20%;
-}
-#youtube{
-    border-radius: 30%;
-}
-#facebook:hover{
-    background-color: rgb(23, 77, 177);
-}
-#youtube:hover{
-    background-color: rgb(201, 22, 22);
-}
-#mail:hover{
-    background-color: rgb(220, 226, 238);
-}
+
 #transLogo{
     width: 50%;
     float:right;
@@ -186,19 +136,7 @@ h2 {
     display: inline-block;
 }
 
-.modal{
-    display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9);
-}
+
 
 #cancelButton{
     display: none;
@@ -223,15 +161,7 @@ h2 {
    margin: 10px;
 }
 
-#gallerySpace{
-    padding-top: 200px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 
-    
-  
-}
 .cell{
     height: 200px;
     width: 300px;
@@ -316,15 +246,6 @@ position: relative;
     background-color: white;
 }
 
-#table{
-    color: white;
-    border-color: white;
-    border: 1px;
-    border-style: solid;
-    width: 30%;
-    text-align: center;
-    margin-left: 35%;
-}
 #firstArea{
     width: 100%;
 }
