@@ -8,95 +8,29 @@
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/blighty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concerts</title>
-    <script>
-        // Mock data for testing
-        const mockConcerts = [
-            { date: '2025-04-01T20:00:00Z', venue_name: 'The Roxy', city: 'Los Angeles', country: 'USA' },
-            { date: '2025-04-05T19:30:00Z', venue_name: 'The Fillmore', city: 'San Francisco', country: 'USA' },
-            { date: '2025-04-10T21:00:00Z', venue_name: 'O2 Academy', city: 'London', country: 'UK' }
-        ];
-
-        async function loadConcerts() {
-            const tbody = document.getElementById('concertBody');
-            tbody.innerHTML = '';
-
-            // Simulate API delay
-            await new Promise(resolve => setTimeout(resolve, 500));
-
-            const concerts = mockConcerts;
-
-            if (!concerts.length) {
-                tbody.innerHTML = '<tr><td colspan="4">No upcoming concerts found.</td></tr>';
-                return;
-            }
-
-            concerts.forEach(concert => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-      <td>${new Date(concert.date).toLocaleDateString()}</td>
-      <td>${concert.venue_name || 'TBD'}</td>
-      <td>${concert.city || 'Unknown'}</td>
-      <td>${concert.country || 'Unknown'}</td>
-    `;
-                tbody.appendChild(row);
-            });
-        }
-
-        window.onload = loadConcerts;
-
-
-
-    </script>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+ 
 </head>
 <body>
     <div id="concertsBg">
         <h1>Concerts</h1>
-        <nav>
-            <div id="MM">
+        <div id="nav-container"></div>
+        <script src="nav.js"></script>
 
-                <a href="index.html" class="mainMenu">Home</a><a href="Concerts.html" class="mainMenu" style="border: 1px solid gray">Concerts</a><a href="Contact.html" class="mainMenu">Contact</a><a href="Gallery.html" class="mainMenu">Gallery</a><a href="Bio.html" class="mainMenu">Bio</a>
-
-            </div>
-        </nav>
-
-        <h1>Upcoming Concerts</h1>
-        <table id="concertTable">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Venue</th>
-                    <th>City</th>
-                    <th>Country</th>
-                </tr>
-            </thead>
-            <tbody id="concertBody"></tbody>
-        </table>
-        <script src="script.js"></script>
+        <div class="widget_iframe" style="display:inline-block;width:800px;height:600px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_2666340?widget_id=52&amp;posted_by=artist_9224673&pwc[design]=default&pwc[background_color]=%23333333&pwc[layout]=detailed&pwc[show_map]=0%2C1&pwc[size]=custom" width="100%" height="100%" frameborder="0" scrolling="no"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"></div></div>
 
     </div>
+
+    <div id="music-player">
+        <p>Now Playing: Demo Track</p>
+        <button id="playPauseBtn">Play</button>
+    </div>
+
     <footer class="footer">
-        <div id="copyRight"><h3>Studentská Semestrální Práce - Alfred Withers &copy; 2022</h3>
-          <p>last updated: 29.11.2022</p>
+        <div id="copyRight">
+            <h3>Studentská Semestrální Práce - Alfred Withers &copy; 2022</h3>
+            <p>last updated: 29.11.2022</p>
         </div>
-      </footer>
+    </footer>
 
 </body>
 </html>

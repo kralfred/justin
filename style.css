@@ -34,6 +34,11 @@ margin: 0;
 padding-top: 20px;
 font-size: 5rem;
 
+user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+
 }
 
 
@@ -70,6 +75,62 @@ h2 {
     background-repeat: no-repeat;
     padding-bottom: 50rem;
 }
+
+.active {
+    background-color: #333;
+    color: white;
+}
+
+#music-player {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+    #music-player p {
+        margin: 0 0 10px;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+#playPauseBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    #playPauseBtn:hover {
+        background-color: #555;
+    }
+
+    #playPauseBtn.playing {
+        background-color: #ff4444; /* Red when playing */
+    }
+
+
+#audioToggleBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%; /* Circular */
+    font-size: 20px; /* Emoji size */
+    cursor: pointer;
+    opacity: 0.7; /* Slightly faded */
+    transition: opacity 0.2s;
+}
+
+    #audioToggleBtn:hover {
+        opacity: 1; /* Full opacity on hover */
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 
 #secondSection{
     background-size: 100%;

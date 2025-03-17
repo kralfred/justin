@@ -3,46 +3,12 @@ document.body.onload = createNewElements(13, "div", "colom", "cell", "gallerySpa
 
 
 
-
 let target = document.getElementById("maxImage");
 let cancelButton = document.getElementById("cancelButton");
 
+const links = document.querySelectorAll('.venue-link');
 
 
-// Mock data for testing
-const mockConcerts = [
-    { date: '2025-04-01T20:00:00Z', venue_name: 'The Roxy', city: 'Los Angeles', country: 'USA' },
-    { date: '2025-04-05T19:30:00Z', venue_name: 'The Fillmore', city: 'San Francisco', country: 'USA' },
-    { date: '2025-04-10T21:00:00Z', venue_name: 'O2 Academy', city: 'London', country: 'UK' }
-];
-
-async function loadConcerts() {
-    const tbody = document.getElementById('concertBody');
-    tbody.innerHTML = '';
-
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-
-    const concerts = mockConcerts;
-
-    if (!concerts.length) {
-        tbody.innerHTML = '<tr><td colspan="4">No upcoming concerts found.</td></tr>';
-        return;
-    }
-
-    concerts.forEach(concert => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-      <td>${new Date(concert.date).toLocaleDateString()}</td>
-      <td>${concert.venue_name || 'TBD'}</td>
-      <td>${concert.city || 'Unknown'}</td>
-      <td>${concert.country || 'Unknown'}</td>
-    `;
-        tbody.appendChild(row);
-    });
-}
-
-window.onload = loadConcerts;
 
 
 function createNewElements(numberOfElements, TYPE, ID, CLASS, targetID){
@@ -76,7 +42,7 @@ document.getElementById(currentId).appendChild(innerPicture);
 function maximizeImg(){
 
     target.style.display = "block";
-
+    clickSound.play();
     cancelButton.style.display = "block";
      let currentId = this.id;
 
