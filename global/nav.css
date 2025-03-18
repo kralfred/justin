@@ -1,0 +1,25 @@
+#MM {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.mainMenu {
+    font-family: 'blighty', sans-serif;
+    color: #BF4904;
+    text-decoration: none;
+    font-size: 1.875em;
+    border-radius: 20%; 
+    padding: 5px 10px; 
+    margin: 30px 15px; 
+}
+
+    .mainMenu:hover {
+        background: #555;
+        
+    }
+
+    .mainMenu.active {
+        font-weight: bold;
+    }

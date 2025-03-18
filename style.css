@@ -1,9 +1,10 @@
+@import url('global/footer.css');
+@import url('global/nav.css');
 body{
     text-align: center;
     margin: 0;
     background-color: #000000;
 }
-
 
 #mainSectionIndex{
     
@@ -46,31 +47,7 @@ h2 {
       font-family:'blighty', sans-serif;
       color:white;
 }
-#MM {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
 
-.mainMenu {
-    font-family: 'blighty', sans-serif;
-    color: #BF4904;
-    text-decoration: none;
-    font-size: 1.875em;
-    border-radius: 30%; /* Keep the radius */
-    padding: 5px 10px; /* Reduce padding, adjust as needed */
-    margin: 30px 15px; /* Keep horizontal spacing, remove vertical */
-}
-
-    .mainMenu:hover {
-        background: #555; /* Keep hover background */
-        /* Remove border to avoid size jump */
-    }
-
-    .mainMenu.active {
-        font-weight: bold; /* If you still use this */
-    }
 #concertsBg{
     background-image: linear-gradient(to bottom, transparent 20%, #000000bd 90%, #000000 95%), url('images/gallery/1.jpg');;
     background-size: 100%;
@@ -204,13 +181,7 @@ position: relative;
 
 }
 
-.footer{
-    color: white;
-    text-align: center;
-    position:static;
-    bottom: 0;
-    width:100%;
-}
+
 
 
 @media (max-width: 1200px){
@@ -242,9 +213,6 @@ position: relative;
       }
 }
 
-#mailIcon{
-    background-color: white;
-}
 
 #firstArea{
     width: 100%;

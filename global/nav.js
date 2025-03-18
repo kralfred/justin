@@ -23,13 +23,14 @@
         <nav>
             <div id="MM">
                 <a href="index.html" class="mainMenu">Home</a>
-                <a href="Concerts.html" class="mainMenu">Concerts</a>
+                <a href="Concerts.html" class="mainMenu">Events</a>
                 <a href="Contact.html" class="mainMenu">Contact</a>
                 <a href="Gallery.html" class="mainMenu">Gallery</a>
                 <a href="Bio.html" class="mainMenu">Bio</a>
             </div>
         </nav>
         <button id="audioToggleBtn" title="Toggle Audio">${isAudioMuted ? '🔇' : '🔊'}</button>
+
     `;
     document.getElementById('nav-container').innerHTML = nav;
 
