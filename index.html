@@ -8,10 +8,25 @@
 <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/blighty">
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="text/javascript">
+            (function(w,d,u){
+                w.$productFruits = w.$productFruits || [];
+                w.productFruits=w.productFruits||{ };w.productFruits.scrV='2';
+                let a=d.getElementsByTagName('head')[0];let r=d.createElement('script');r.async=1;r.src=u;a.appendChild(r);
+            })(window,document,'https://app.productfruits.com/static/script.js');
+        </script>
+
 
 
 </head>
 <body>
+
+    <div id="user-identification">
+        <label for="username-input">Enter your Name:</label>
+        <input type="text" id="username-input">
+        <button onclick="identifyUser()">Submit</button>
+    </div>
 
     <div id="mainSectionIndex" class="mainSection">
 
@@ -38,7 +53,29 @@
 
 
     </div>
+    <script>
+        let currentUsername = null;
+        const mainContent = document.getElementById('mainSectionIndex');
+        const secondContent = document.getElementById('secondSection');
+        const userIdentification = document.getElementById('user-identification');
 
+        function identifyUser() {
+            const usernameInput = document.getElementById('username-input');
+            currentUsername = usernameInput.value.trim();
+            if (currentUsername) {
+                userIdentification.style.display = 'none';
+                mainContent.style.display = 'block';
+                secondContent.style.display = 'block';
+                initializeProductFruits(currentUsername);
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+
+        function initializeProductFruits(username) {
+            $productFruits.push(['init', 'Xz67VXodQTv8XtZS', 'en', { username: username }]);
+        }
+    </script>
 
     <script src="global/footer.js"></script>
 
